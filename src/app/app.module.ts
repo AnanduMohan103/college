@@ -5,16 +5,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddstudentComponent } from './addstudent/addstudent.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SearchstudComponent } from './searchstud/searchstud.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes:Routes=[
+  {
+    path:"",component:AddstudentComponent
+  },
+  {
+    path:"search",component:SearchstudComponent
+  }
+  
+]
+  
 
 @NgModule({
   declarations: [
     AppComponent,
     AddstudentComponent,
-    NavbarComponent
+    NavbarComponent,
+    SearchstudComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
