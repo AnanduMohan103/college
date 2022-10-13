@@ -5,10 +5,10 @@
             <div class="row g-3">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="Employee code">Search Student</label>
-                    <input type="Employee code" class="form-control">
+                    <input type="Employee code" class="form-control" name="searchStud"[(ngModel)]="searchStud">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <button class="btn btn-success">Search</button>
+                    <button class="btn btn-success" (click)="readValue()">Search</button>
                 </div>
             </div>
         </div>
